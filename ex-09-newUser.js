@@ -21,7 +21,14 @@
 // ++ YOUR CODE HERE
 
 
+function User(name, role){
+	var objeto = {
+		"name" : name,
+		"role" : role,
+		"createdAt" : Date.now();
+	}
 
+}
 
 
 

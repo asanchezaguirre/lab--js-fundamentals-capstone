@@ -22,26 +22,35 @@
 // ++ YOUR CODE HERE
 
 function showStats(number, array){
+var objeto = {};
+var contadorEqual = 0;
+var contadorGreater = 0;
+var contadorLess = 0;
+var arrayL = array.length;
 
-	var objeto = {};
+	for( var i = 0; i < array.length; i++){
+		if( number === array[i]){
+			contadorEqual ++;
 
-	for( i = 0; 1 < array.length; i++){
-		var contadorIgual = 0
-		if(array[i] = number){
-			contadorIgual++;
+		}else if(number > array[i]){
+			contadorGreater ++;
+		}else if (number < array[i]){
+			contadorLess ++;
 		}
 
 
-	console.log(contadorIgual);
-
-
+		objeto.inputArraySize = arrayL;
+		objeto.countValuesInputIsEqualTo = contadorEqual;
+		objeto.countValuesInputIsGreaterThan = contadorGreater;
+		objeto.countValuesInputIsLessThan = contadorLess;
+		
 
 	}
+	return objeto;
 }
 
 
-
-
+//newObj. aqui va el array =  va el parametro count.length
 
 
 // *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
