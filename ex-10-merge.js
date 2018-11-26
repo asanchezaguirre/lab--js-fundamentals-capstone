@@ -14,7 +14,24 @@
 // ++ YOUR CODE HERE
 
 
+function merge(objeto1, objeto2){
+	var newObject = {};
 
+
+//itero sobre el primer objeto 
+	for( var primera in objeto1){
+		//itero sobre el segundo para hacer una comparaciòn
+		for (var segunda in objeto2){
+		//si los items del primer objeto son identicos al del segundo
+		if(objeto1[primera] === objeto2[segunda]){
+		//entonces los items del primero seràn iguales al segundo
+		objeto2[segunda] = objeto1[primera];
+		}
+		}
+	}
+
+  console.log(newObject[objeto2[segunda]]);
+}
 
 
 

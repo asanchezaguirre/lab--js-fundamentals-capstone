@@ -12,7 +12,9 @@
 
  // ++ YOUR CODE HERE
 
+function where(lista, propiedades){
 
+}
 
 
 

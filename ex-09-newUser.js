@@ -25,10 +25,23 @@ function User(name, role){
 	var objeto = {
 		"name" : name,
 		"role" : role,
-		"createdAt" : Date.now();
-	}
+		"createdAt" : Date.now(),
+	
 
-}
+	hasPermissions (array){
+		for (var i = 0; i < array.length; i++){
+			if(array[i] === objeto.role){
+				return true;
+			} 
+		}
+		return false;
+	}
+	}
+	return objeto;
+}	
+
+			
+
 
 
 
