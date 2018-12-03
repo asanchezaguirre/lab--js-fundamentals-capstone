@@ -15,22 +15,22 @@
 
 
 function merge(objeto1, objeto2){
-	var newObject = {};
+	//declarar variable nuevo objeto
+	var objeto = {};
 
+	//iterar sobre el primer objeto
+	for( var key in objeto1){
 
-//itero sobre el primer objeto 
-	for( var primera in objeto1){
-		//itero sobre el segundo para hacer una comparaciòn
-		for (var segunda in objeto2){
-		//si los items del primer objeto son identicos al del segundo
-		if(objeto1[primera] === objeto2[segunda]){
-		//entonces los items del primero seràn iguales al segundo
-		objeto2[segunda] = objeto1[primera];
-		}
-		}
+	//asignar el valor a una propiedad(key) nueva que acabamos de crear
+	objeto[key] = objeto1[key];
 	}
+	//iterar sobre el segundo objeto
+	for (var key in objeto2){
+		//el valor de la propiedad(key) del primer objeto es igual al valor de la propiedad key del segundo
+		objeto[key] = objeto2[key]
+	}
+	return objeto;
 
-  console.log(newObject[objeto2[segunda]]);
 }
 
 

@@ -12,7 +12,25 @@
 
  // ++ YOUR CODE HERE
 
-function where(lista, propiedades){
+function where(listOfObjects, objProperty){
+
+  newListOfObjects = [];
+
+  for(var i = 0; i < listOfObjects.length; i++){
+    var  objInListOfObjects = listOfObjects[i];
+    var found = true;
+    for (key in objProperty){
+      if (objProperty[key] !== objInListOfObjects[key]){
+        found = false;
+      }
+    }
+      if(found === true){
+        newListOfObjects.push(objInListOfObjects);
+      }
+
+  }
+
+  return newListOfObjects;
 
 }
 
